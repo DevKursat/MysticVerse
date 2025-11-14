@@ -1,4 +1,99 @@
-@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --cosmic-deep: #1A0B2E;
+    --cosmic-mid: #2D1B4E;
+    --midnight-dark: #0F1828;
+    --midnight-light: #1B2838;
+    --indigo-rich: #3D2C8D;
+    /* Accent Colors */
+    --gold-bright: #FFD700;
+    --gold-muted: #F4C430;
+    --silver: #C0C0C0;
+    --aurora-purple: #9D4EDD;
+    /* Text Colors */
+    --text-primary: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-tertiary: rgba(255, 255, 255, 0.6);
+    --text-disabled: rgba(255, 255, 255, 0.4);
+  }
+
+  body {
+    @apply bg-cosmic-deep text-text-primary font-primary;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--midnight-dark);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--indigo-rich);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--aurora-purple);
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card Style */
+  .glass-card {
+    @apply relative p-8 bg-[rgba(255,255,255,0.05)] backdrop-blur-lg border border-[rgba(255,255,255,0.1)] rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-300;
+  }
+  .glass-card:hover {
+    @apply -translate-y-2 shadow-[0_16px_48px_rgba(0,0,0,0.4)];
+  }
+}
+
+@layer utilities {
+  /* Text Gradients */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold-bright to-gold-muted bg-clip-text text-transparent;
+  }
+  .text-gradient-aurora {
+    @apply bg-gradient-to-r from-aurora-purple to-silver bg-clip-text text-transparent;
+  }
+}
+
+/* Cosmic Background CSS */
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+#stars, #stars2, #stars3 {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+}
+
+#stars {
+    background:#000 url(https://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+    z-index:0;
+}
+
+#stars2 {
+    background:transparent url(https://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+    z-index:1;
+    animation:move-twink-back 200s linear infinite;
+}
+
+#stars3 {
+    background:transparent url(https://www.script-tutorials.com/demos/360/images/clouds.png) repeat top center;
+    z-index:2;
+}
