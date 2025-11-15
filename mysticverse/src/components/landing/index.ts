@@ -1,0 +1,9 @@
+export { HeroSection } from './HeroSection';
+export { ServicesGrid } from './ServicesGrid';
+export { HowItWorks } from './HowItWorks';
+export { FeaturedPsychics } from './FeaturedPsychics';
+export { TestimonialsSection } from './TestimonialsSection';
+export { StatsSection } from './StatsSection';
+export { FAQSection } from './FAQSection';
+export { CTASection } from './CTASection';
+export { CosmicBackground } from './CosmicBackground';

@@ -15,9 +15,18 @@ const config: Config = {
         'midnight-light': '#1B2838',
         'indigo-rich': '#3D2C8D',
         'gold-bright': '#FFD700',
-        'gold-muted': ' #F4C430',
+        'gold-muted': '#F4C430',
+        'gold-orange': '#FFA500',
         silver: '#C0C0C0',
         'aurora-purple': '#9D4EDD',
+        'text-primary': '#FFFFFF',
+        'text-secondary': 'rgba(255, 255, 255, 0.8)',
+        'text-tertiary': 'rgba(255, 255, 255, 0.6)',
+        'text-disabled': 'rgba(255, 255, 255, 0.4)',
+        'glass': {
+          DEFAULT: 'rgba(255, 255, 255, 0.05)',
+          border: 'rgba(255, 255, 255, 0.1)',
+        },
       },
       fontFamily: {
         primary: ['Inter', '-apple-system', 'sans-serif'],
@@ -92,6 +101,8 @@ const config: Config = {
       },
       animation: {
         fadeUp: 'fadeUp 0.6s ease-out',
+        fadeIn: 'fadeUp 0.3s ease-out',
+        fadeOut: 'fadeUp 0.15s ease-in reverse',
         cosmicSpin: 'cosmicSpin 20s linear infinite',
         pulseGlow: 'pulseGlow 2s ease-in-out infinite',
         particleFloat: 'particleFloat 4s ease-in-out infinite',
